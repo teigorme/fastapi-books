@@ -1,0 +1,23 @@
+[project]
+name = "fastapi-books"
+version = "0.1.0"
+description = "Default template for PDM package"
+authors = [{ name = "teigorme", email = "igorteixeira354@gmail.com" }]
+dependencies = [
+    "fastapi[standard]>=0.119.0",
+    "fastapi-users[sqlalchemy]>=14.0.1",
+    "asyncpg>=0.30.0",
+    "pydantic-settings>=2.11.0",
+    "alembic>=1.17.0",
+]
+requires-python = "==3.13.*"
+readme = "README.md"
+license = { text = "MIT" }
+
+
+[tool.pdm]
+distribution = false
+
+[tool.pdm.scripts]
+start = "fastapi run src/main.py"
+dev = "fastapi dev src/main.py"
